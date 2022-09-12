@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schema &mdash; snuba-sdk 1.0.1 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Schema Examples" href="schema_examples.html" />
+    <link rel="prev" title="Entity" href="entity.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> snuba-sdk<img src="_static/sentry-logo-black.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                1.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="request.html">Request</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query.html">Query</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conditions.html">Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_examples.html">Schema Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expressions.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legacy.html">Legacy Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query_visitors.html">Query Visitors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visitors.html">Visitors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="snuba.html">Snuba</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">snuba-sdk</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="sdk.html">&lt;no title&gt;</a> &raquo;</li>
+      <li>Schema</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/schema.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-snuba_sdk.schema">
+<span id="schema"></span><h1>Schema<a class="headerlink" href="#module-snuba_sdk.schema" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="snuba_sdk.schema.Column">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">snuba_sdk.schema.</span></code><code class="sig-name descname"><span class="pre">Column</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snuba_sdk/schema.html#Column"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.schema.Column" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="snuba_sdk.schema.Column.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#snuba_sdk.schema.Column.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="snuba_sdk.schema.Column.required">
+<code class="sig-name descname"><span class="pre">required</span></code><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#snuba_sdk.schema.Column.required" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="snuba_sdk.schema.ColumnSet">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">snuba_sdk.schema.</span></code><code class="sig-name descname"><span class="pre">ColumnSet</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">columns</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snuba_sdk/schema.html#ColumnSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.schema.ColumnSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="snuba_sdk.schema.ColumnSet.column_names">
+<code class="sig-name descname"><span class="pre">column_names</span></code><em class="property"><span class="pre">:</span> <span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#snuba_sdk.schema.ColumnSet.column_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="snuba_sdk.schema.ColumnSet.columns">
+<code class="sig-name descname"><span class="pre">columns</span></code><em class="property"><span class="pre">:</span> <span class="pre">set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#snuba_sdk.schema.Column" title="snuba_sdk.schema.Column"><span class="pre">Column</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#snuba_sdk.schema.ColumnSet.columns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="snuba_sdk.schema.ColumnSet.contains">
+<code class="sig-name descname"><span class="pre">contains</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snuba_sdk/schema.html#ColumnSet.contains"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.schema.ColumnSet.contains" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="snuba_sdk.schema.EntityModel">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">snuba_sdk.schema.</span></code><code class="sig-name descname"><span class="pre">EntityModel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required_time_column</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snuba_sdk/schema.html#EntityModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.schema.EntityModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="snuba_sdk.schema.EntityModel.column_set">
+<code class="sig-name descname"><span class="pre">column_set</span></code><em class="property"><span class="pre">:</span> <a class="reference internal" href="#snuba_sdk.schema.ColumnSet" title="snuba_sdk.schema.ColumnSet"><span class="pre">ColumnSet</span></a></em><a class="headerlink" href="#snuba_sdk.schema.EntityModel.column_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="snuba_sdk.schema.EntityModel.contains">
+<code class="sig-name descname"><span class="pre">contains</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snuba_sdk/schema.html#EntityModel.contains"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.schema.EntityModel.contains" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="snuba_sdk.schema.EntityModel.required_columns">
+<code class="sig-name descname"><span class="pre">required_columns</span></code><em class="property"><span class="pre">:</span> <span class="pre">set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#snuba_sdk.schema.Column" title="snuba_sdk.schema.Column"><span class="pre">Column</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#snuba_sdk.schema.EntityModel.required_columns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="snuba_sdk.schema.EntityModel.required_time_column">
+<code class="sig-name descname"><span class="pre">required_time_column</span></code><em class="property"><span class="pre">:</span> <a class="reference internal" href="#snuba_sdk.schema.Column" title="snuba_sdk.schema.Column"><span class="pre">Column</span></a></em><a class="headerlink" href="#snuba_sdk.schema.EntityModel.required_time_column" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="entity.html" class="btn btn-neutral float-left" title="Entity" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="schema_examples.html" class="btn btn-neutral float-right" title="Schema Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Sentry Team and Contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

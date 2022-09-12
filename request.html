@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request &mdash; snuba-sdk 1.0.1 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Query" href="query.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="sdk.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> snuba-sdk<img src="_static/sentry-logo-black.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                1.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Request</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query.html">Query</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conditions.html">Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema_examples.html">Schema Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expressions.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joins.html">Joins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="legacy.html">Legacy Conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query_visitors.html">Query Visitors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visitors.html">Visitors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="snuba.html">Snuba</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">snuba-sdk</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="sdk.html">&lt;no title&gt;</a> &raquo;</li>
+      <li>Request</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/request.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-snuba_sdk.request">
+<span id="request"></span><h1>Request<a class="headerlink" href="#module-snuba_sdk.request" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="snuba_sdk.request.Flags">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">snuba_sdk.request.</span></code><code class="sig-name descname"><span class="pre">Flags</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">totals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">consistent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">turbo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_run</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">legacy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snuba_sdk/request.html#Flags"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.request.Flags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="snuba_sdk.request.Flags.consistent">
+<code class="sig-name descname"><span class="pre">consistent</span></code><em class="property"><span class="pre">:</span> <span class="pre">bool</span> <span class="p"><span class="pre">|</span></span> <span class="pre">None</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#snuba_sdk.request.Flags.consistent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="snuba_sdk.request.Flags.debug">
+<code class="sig-name descname"><span class="pre">debug</span></code><em class="property"><span class="pre">:</span> <span class="pre">bool</span> <span class="p"><span class="pre">|</span></span> <span class="pre">None</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#snuba_sdk.request.Flags.debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="snuba_sdk.request.Flags.dry_run">
+<code class="sig-name descname"><span class="pre">dry_run</span></code><em class="property"><span class="pre">:</span> <span class="pre">bool</span> <span class="p"><span class="pre">|</span></span> <span class="pre">None</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#snuba_sdk.request.Flags.dry_run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="snuba_sdk.request.Flags.legacy">
+<code class="sig-name descname"><span class="pre">legacy</span></code><em class="property"><span class="pre">:</span> <span class="pre">bool</span> <span class="p"><span class="pre">|</span></span> <span class="pre">None</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#snuba_sdk.request.Flags.legacy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="snuba_sdk.request.Flags.to_dict">
+<code class="sig-name descname"><span class="pre">to_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/snuba_sdk/request.html#Flags.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.request.Flags.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="snuba_sdk.request.Flags.totals">
+<code class="sig-name descname"><span class="pre">totals</span></code><em class="property"><span class="pre">:</span> <span class="pre">bool</span> <span class="p"><span class="pre">|</span></span> <span class="pre">None</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#snuba_sdk.request.Flags.totals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="snuba_sdk.request.Flags.turbo">
+<code class="sig-name descname"><span class="pre">turbo</span></code><em class="property"><span class="pre">:</span> <span class="pre">bool</span> <span class="p"><span class="pre">|</span></span> <span class="pre">None</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#snuba_sdk.request.Flags.turbo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="snuba_sdk.request.Flags.validate">
+<code class="sig-name descname"><span class="pre">validate</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/snuba_sdk/request.html#Flags.validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.request.Flags.validate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt id="snuba_sdk.request.InvalidFlagError">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">snuba_sdk.request.</span></code><code class="sig-name descname"><span class="pre">InvalidFlagError</span></code><a class="reference internal" href="_modules/snuba_sdk/request.html#InvalidFlagError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.request.InvalidFlagError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="snuba_sdk.request.InvalidRequestError">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">snuba_sdk.request.</span></code><code class="sig-name descname"><span class="pre">InvalidRequestError</span></code><a class="reference internal" href="_modules/snuba_sdk/request.html#InvalidRequestError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.request.InvalidRequestError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="snuba_sdk.request.Request">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">snuba_sdk.request.</span></code><code class="sig-name descname"><span class="pre">Request</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">dataset</span></em>, <em class="sig-param"><span class="pre">app_id</span></em>, <em class="sig-param"><span class="pre">query</span></em>, <em class="sig-param"><span class="pre">flags=&lt;factory&gt;</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snuba_sdk/request.html#Request"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.request.Request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="snuba_sdk.request.Request.app_id">
+<code class="sig-name descname"><span class="pre">app_id</span></code><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#snuba_sdk.request.Request.app_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="snuba_sdk.request.Request.dataset">
+<code class="sig-name descname"><span class="pre">dataset</span></code><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#snuba_sdk.request.Request.dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="snuba_sdk.request.Request.flags">
+<code class="sig-name descname"><span class="pre">flags</span></code><em class="property"><span class="pre">:</span> <a class="reference internal" href="#snuba_sdk.request.Flags" title="snuba_sdk.request.Flags"><span class="pre">snuba_sdk.request.Flags</span></a></em><a class="headerlink" href="#snuba_sdk.request.Request.flags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="snuba_sdk.request.Request.print">
+<code class="sig-name descname"><span class="pre">print</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/snuba_sdk/request.html#Request.print"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.request.Request.print" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="snuba_sdk.request.Request.query">
+<code class="sig-name descname"><span class="pre">query</span></code><em class="property"><span class="pre">:</span> <a class="reference internal" href="query.html#snuba_sdk.query.Query" title="snuba_sdk.query.Query"><span class="pre">snuba_sdk.query.Query</span></a></em><a class="headerlink" href="#snuba_sdk.request.Request.query" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="snuba_sdk.request.Request.serialize">
+<code class="sig-name descname"><span class="pre">serialize</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/snuba_sdk/request.html#Request.serialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.request.Request.serialize" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="snuba_sdk.request.Request.to_dict">
+<code class="sig-name descname"><span class="pre">to_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/snuba_sdk/request.html#Request.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.request.Request.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="snuba_sdk.request.Request.validate">
+<code class="sig-name descname"><span class="pre">validate</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/snuba_sdk/request.html#Request.validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snuba_sdk.request.Request.validate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sdk.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="query.html" class="btn btn-neutral float-right" title="Query" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Sentry Team and Contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
